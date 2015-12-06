@@ -23,6 +23,7 @@ from datetime import datetime
 from google.appengine.api import users
 from neosa import *
 
+
 # sets system Environment
 jinja_environment = jinja2.Environment(
   loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
