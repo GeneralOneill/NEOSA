@@ -179,8 +179,16 @@ class ProfilePageHandler(webapp2.RequestHandler):
             self.response.out.write(template.render({"user":user}))
 
     def post(self):
-        self.response.headers['Content-Type'] = 'application/json';
-        self.response.out.write(template.render({"user":user}))
+        def post(self):
+            user = getCurrentUser().get()
+            first_name = self.request.get("first_name")
+            last_name = self.request.get("last_name")
+            subject = self.request.get("subject")
+            user.first_name = first_name
+            user.last_name = last_name
+            user.subject = subject
+            user.put()
+            # self.redirect('/profilepage')
 
 # sets the pointers to the appropriate class
 # ie the path in the url

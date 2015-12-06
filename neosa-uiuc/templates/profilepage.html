@@ -72,6 +72,26 @@
                       </div>
                     </div>
                     <div id="Info">
+                      <div>
+                        <form method="post">
+                          <input type="text" name="first_name" placeholder="{{user.first_name}}">
+                          <br>
+                          <br>
+                          <input type="text" name="last_name" placeholder="{{user.last_name}}">
+                          <br>
+                          <br>
+                          <input type="text" name="subject" placeholder="{{user.subject}}">
+                          <br>
+                          <br>
+                          <input type="text" name="major" placeholder="{{user.major}}">
+                          <br>
+                          <br>
+                          <!-- <input type="text" name="date_of_birth" placeholder="Date of Birth">
+                          <br>
+                          <br> -->
+                          <input type="submit" value="Update" class="btn btn-primary btn-xl">
+                        </form>
+                      </dv>
                         <p>
                             <strong>Name:</strong>
                             <span>{{user.first_name + " " + user.last_name}}</span>
