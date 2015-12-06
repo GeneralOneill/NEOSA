@@ -172,8 +172,11 @@ class SubjectHandler(webapp2.RequestHandler):
 # experimental page that is still underdevelopment
 class ProfilePageHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/profilepage.html')
-        self.response.out.write(template.render())
+        user = getCurrentUser().get()
+        if user:
+            template = jinja_environment.get_template('templates/profilepage.html')
+            self.response.out.write(template.render({"user":user}))
+
     def post(self):
         self.response.headers['Content-Type'] = 'application/json';
         self.response.out.write(template.render({"user":user}))
