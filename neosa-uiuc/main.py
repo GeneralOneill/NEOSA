@@ -68,7 +68,7 @@ class MapHandler(webapp2.RequestHandler):
         user = users.get_current_user()
         template = jinja_environment.get_template('templates/map.html')
         if user:
-            latlng = {'latlng':json.dumps(getAllUsersLatLng())}
+            template = jinja_environment.get_template('templates/map.html')
             username = getCurrentUser().get().username
             # renders the map page
             self.response.out.write(template.render({"username": username}))
@@ -94,7 +94,7 @@ class UsersHandler(webapp2.RequestHandler):
         # sets the handler to send json data
         self.response.headers['Content-Type'] = 'application/json';
         # add latlng data to a dicitonary
-        obj = {'latlngArray': getAllOtherActiveUsersLatLng()}
+        obj = {'userInfoArray': getAllOtherActiveUsersLatLng()}
         # sends the data to the map page
         self.response.out.write(json.dumps(obj))
 
