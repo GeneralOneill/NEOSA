@@ -4,4 +4,4 @@
 neosa-uiuc/*.pyc
 /neosa-uiuc/*.pyc
 /*.pyc
-/bower_components
+neosa-uiuc/bower_components
