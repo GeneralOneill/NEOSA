@@ -173,7 +173,8 @@ class ProfilePageHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/profilepage.html')
         self.response.out.write(template.render())
     def post(self):
-        user = getCurrentUser.get()
+        self.response.headers['Content-Type'] = 'application/json';
+        self.response.out.write(template.render({"user":user}))
 
 # sets the pointers to the appropriate class
 # ie the path in the url
