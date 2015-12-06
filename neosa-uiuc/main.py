@@ -19,6 +19,7 @@ import jinja2
 import json
 import os
 import logging
+import datetime
 from datetime import datetime
 from google.appengine.api import users
 from neosa import *
@@ -33,6 +34,7 @@ class Test(webapp2.RequestHandler):
             self.response.out.write('%s --- ' %(date))
         # template = jinja_environment.get_template('templates/subject.html')
         # self.response.out.write(template.render())
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         user = getCurrentUser()
@@ -68,9 +70,10 @@ class MapHandler(webapp2.RequestHandler):
 
 class UsersHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.headers['Content-Type'] = 'application/json';
+        self.response.headers['Content-Type'] = 'application/json'
         obj = {'latlngArray': getAllUsersLatLng()}
         self.response.out.write(json.dumps(obj))
+
 
 class LogoutHandler(webapp2.RequestHandler):
     def get(self):
@@ -79,6 +82,36 @@ class LogoutHandler(webapp2.RequestHandler):
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
         self.redirect(users.create_login_url('/profile'))
+
+class Schedule(webapp2.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'application/json'
+        schedule_object = {"schedule" : getAllUsersSchedule()}
+
+        # self.response.out.write(json.dumps(schedule_object))
+        # for part in schedule_object:
+        #     ref_dict =  {"schedule": [{"id": id }]}
+        # self.response.out.write(ref_difeguct)
+        # schedule = getAllUsersSchedule()
+        # {"schedule" : [DateTime]}
+        # of the dictionary
+        #
+        # compare the time however you like,
+        # store it in a dictionary or a list
+        # make a schedule_object, which is a dictionary
+        self.response.out.write(schedule_object)
+
+
+    def get_times(fileName):
+          schedule_dict = json.load(fileName)
+          dateTimes = []
+          each_schedule = schedule_dict["schedule"]
+          for schedule in each_schedule:
+             dateTimes += schedule["schedule"]
+          return dateTimes
+          self.response.out.write(dateTimes)
+
+
 
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
@@ -141,5 +174,6 @@ app = webapp2.WSGIApplication([
     ('/test', Test),
     ('/logout', LogoutHandler),
     ('/subject', SubjectHandler),
+    ('/schedule_test', Schedule),
     ('/.*', MainHandler)
 ], debug=True)

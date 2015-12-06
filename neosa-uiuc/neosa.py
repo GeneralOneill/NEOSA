@@ -40,3 +40,11 @@ def getAllUsersLatLng():
         user = key.get()
         userLatLngTupleArray.append({"user_id":str(user.user_id), "latlng": user.latlng})
     return userLatLngTupleArray
+
+def getAllUsersSchedule():
+    keys = UserModel.query().fetch(keys_only=True)
+    userScheduleTupleArray = []
+    for key in keys:
+        user = key.get()
+        userScheduleTupleArray.append({"user_id":str(user.user_id), "schedule": user.schedule})
+    return userScheduleTupleArray

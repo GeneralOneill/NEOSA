@@ -1,8 +1,8 @@
 $(document).ready(function(){
   var selected_Times = [];
-;
 
-
+   document.getElementById("demo").style.visibility = 'hidden';
+   window.alert("Hello! It's short and simple! Select the times you are available and click FIND ME A BUDDY to see who else is free. The darker the color the more people are availabl ");
 
 
 
@@ -17,10 +17,12 @@ $(document).ready(function(){
       selected_Times.splice(index, 1);
     }
     else {
-      selected_Times.push($(this).html())
+      selected_Times.push($(this).html());
+      //window.alert(this.rowIndex);
     }
     $(this).toggleClass("highlighted");
   })
+
   .mouseup(function(){
     //turns mouse down off
     isMouseDown=false;
@@ -34,11 +36,13 @@ $(document).ready(function(){
           selected_Times.splice(index, 1);
         }
         else {
-          selected_Times.push($(this).html())
+          selected_Times.push($(this).html());
+
         }
         $(this).toggleClass("highlighted");
+
       }
-    });
+  });
 
   $('#find_button_id').click(function(){
     //sending to information to a place should be placed here
@@ -56,6 +60,11 @@ $(document).ready(function(){
       //Adds 12 to PM hours to get military time
       if(!isAM){
         timeInt = timeInt + 12;
+
+
+
+        //----------------------------------
+
       }
 
       //the DateTime object :D
@@ -65,7 +74,7 @@ $(document).ready(function(){
       //convert it to UTCString so python can interpret it... -_-
       times.push(date.toUTCString());
     }
-
+// times.pull(date.toUTCString())
 
       //POST schedule to backend
       jQuery.ajax({
@@ -83,7 +92,36 @@ $(document).ready(function(){
           // console.log(data);
         }
       });
-  })
+  });
+
+  $('#practice').click(function(){
+    document.getElementById('demo').style.visibility='visible';
+    var hidTr=document.getElementById('demo').getElementsByTagName('tr');
+
+    var cellsArr=[];
+
+    for (var x=0;x<selected_Times.length;x=x+1)
+    {
+      for (var i=0;i<hidTr.length;i=i+1)
+      {
+        if (selected_Times[x]==hidTr[i].getElementsByTagName('td')[0].innerHTML)
+        {
+            cellsArr.push(hidTr[i].getElementsByTagName('td')[0]);
+        }
+
+      }
+    }
+      //selected_Times
+    var colors = [ "#ffe5e5","#ff6666","red" ];
+
+    var lengthCheck=Math.round(Math.random()*(cellsArr.length));
+    for (var l=0; l<lengthCheck;l=l+1)
+    {
+      cellsArr[l].style.backgroundColor=colors[(Math.round(Math.random()*colors.length)) % (colors.length-1)];
+    }
 
 
-});
+  });
+
+
+ });
