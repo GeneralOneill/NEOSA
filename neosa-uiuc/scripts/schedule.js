@@ -4,7 +4,7 @@ $(document).ready(function(){
    document.getElementById("demo").style.visibility = 'hidden';
    window.alert("Hello! It's short and simple! Select the times you are available and click FIND ME A BUDDY to see who else is free. The darker the color the more people are availabl ");
 
-
+//schedule handler implemented in profile page and schedule page
 
   var isMouseDown = false;
   $("#our_table td").mousedown(function () {

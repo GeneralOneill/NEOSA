@@ -2,3 +2,6 @@
 *.pyc
 */*.pyc
 neosa-uiuc/*.pyc
+/neosa-uiuc/*.pyc
+/*.pyc
+neosa-uiuc/bower_components

@@ -1,9 +1,10 @@
-<!-- author Joe Tan -->
+<!-- author Joe Tan and Jonathan Reynolds-->
 <!DOCTYPE html>
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?keyAIzaSyAB6DLyolHXse5MgXizQzyd4JxGeKUk14U&callback"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="scripts/map.js"></script>
     <script src="bootstrap/js/jquery.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
@@ -15,34 +16,41 @@
     <link href="stylesheets/map.css" type="text/css" rel="stylesheet"></link>
   </head>
   <body>
-    <div hidden="hidden" id="latlng">{{latlng}}</div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+              <a class="page-scroll" href="/">Home</a>
+          </li>
+          <li>
+              <a class="page-scroll" href="/profilepage">Profile</a>
+          </li>
+          <li>
+              <a class="page-scroll" href="/schedule">Schedule</a>
+          </li>
+          <li>
+            <a>Logged in as <span id="username">{{username}}</span></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="/logout">Logout</a>
+          </li>
+        </ul>
+    </div>
     <div id="map"></div>
     </div>
-    <section id="portfolio">
-          <div class="container">
-              <div class="row" id="portfolioRow">
-                  <div class="col-lg-12 text-center" id="friendsHeader">
-                      <h2 class="section-heading" id="friendsHeader2">Your Nearby Friends</h2>
-                      <p></p>
-                      <hr class="primary">
-                      <ul class="friendsList" >
-                          <!-- <li>Thomas</li>
-                          <li>Joe</li>
-                          <li>Nathan</li>
-                          <li>Vikrant</li>
-                          <li>Jewel</li>
-                          <li>Kevin</li>
-                          <li>Jacob</li>
-                          <li>Rob</li>
-                          <li>Robert</li>
-                          <li>Kristy</li>
-                          <li>John</li>
-                          <li>Winnie</li> -->
-                      </ul>
-                  </div>
-              </div>
-          </div>
-    </section>
+    <div  id="messagesContainer" class="no-overflow">
+        <h2 class="section-heading text-center">Messages</h2>
+        <div id="messagesParent">
+          <ul id="messages"></ul>
+          <form action="">
+            <div class="input-group">
+              <input id="m"  type="text" class="form-control" autocomplete="off"/>
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="submit">Send</button>
+              </span>
+            </div>
+          </form>
+        </div>
+    </div>
 
     <script src="bootstrap/js/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>

@@ -1,0 +1,30 @@
+Author Joe Tan
+11/7/2015
+
+Update: Files have been reverted back. All changes made after  October 30 is most likely gone. Which means there is quite a bit of work to do.
+
+Hopefully you have followed the basic instructions on Facebook.
+Under that assumption,
+
+Jewel / Naman please work under the JavaScript branch from now on.
+Nathan / Vik please work under the Front-End branch
+
+To checkout each branch use:
+                git checkout [branch-name]
+                          so...
+For Jewel and Naman use:
+                git checkout JavaScript
+
+For Vik and Nathan use:
+                git checkout Front-End
+
+For all of you please complete your assigned task and push them to your perspective branch.
+                              DO NOT PUSH BACK TO THE MAIN BRANCH, IF THIS HAPPENS YOUR ADMIN PRIVILLAGE WILL BE REMOVED,
+                              and then you will have to submit a pull request for every change you make.
+                              Please just push to your own branch, we do not want a repeat of the Halloween hackathon.
+
+In addition please copy over any changes you made since the revert, if you had paid any attention to my instructions, you will be able to copy them over from the old files you have.
+NOTE: When I say copy I do not mean copy and paste, that will just give us the same error we had before the revert.
+      I want each of you to look at your codes, and decide which part of it you actually need, and then copy it over.
+      Before you push to any branch, make sure that you code actually works!!! Do some test cases of your own.
+      

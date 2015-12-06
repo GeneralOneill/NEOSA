@@ -1,11 +1,5 @@
 
-/*!
- * Bootstrap v3.3.2 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -143,7 +137,7 @@ input::-moz-focus-inner {
   border: 0;
 }
 input {
-  line-height: normal;
+  line-height: normal; ##the formatting
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -170,6 +164,7 @@ fieldset {
   padding: .35em .625em .75em;
   margin: 0 2px;
   border: 1px solid #c0c0c0;
+  /*##colors of the format*/
 }
 legend {
   padding: 0;
@@ -189,8 +184,7 @@ td,
 th {
   padding: 0;
 }
-/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
-@media print {
+
   *,
   *:before,
   *:after {
@@ -219,6 +213,7 @@ th {
     border: 1px solid #999;
 
     page-break-inside: avoid;
+     /*## all of this stuff is formatting of the layout, fading and color adjustment*/
   }
   thead {
     display: table-header-group;

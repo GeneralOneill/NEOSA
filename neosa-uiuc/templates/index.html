@@ -1,7 +1,8 @@
-<!-- author Joe Tan -->
+<!-- Joe Tan -->
 <!DOCTYPE html>
+<!-- index page for users that are NOT logged in -->
 <html lang="en">
-
+<!-- header -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,29 +27,34 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <!-- controls scrolling mechanism when user clicks specific info tab -->
             <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <!-- <li>
-                    <a class="page-scroll" href="/profile">Profile</a>
-                </li> -->
-                <li>
-                    <a class="page-scroll" href="/map">Map</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
-                <li>
-                  <a class="page-scroll" href="/logout">Logout</a>
-                </li>
+              <li>
+                  <a class="page-scroll" href="/profilepage">Profile</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="/schedule">Schedule</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="/map">Map</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#portfolio">About</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="#contact">Contact</a>
+              </li>
+              <li>
+                <a class="page-scroll" href="/logout">Logout</a>
+              </li>
             </ul>
         </div>
     </div>
 </nav>
+<!-- intro page for user not logged in -->
   <header>
       <div class="header-content">
           <div class="header-content-inner">
@@ -80,106 +86,109 @@
                       <p></p>
                       <hr class="primary">
     </section>
-<section class="no-padding">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="bootstrap/img/portfolio/1.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category1
-                            </div>
-                            <div class="project-name">
-                                Joe
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="bootstrap/img/portfolio/2.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category2
-                            </div>
-                            <div class="project-name">
-                                Nathan
+    <section id="portfolio">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">Meet Our Creators</h2>
+                      <p></p>
+                      <hr class="primary">
+                      <!-- information on creaters and images -->
+    <section class="no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="bootstrap/img/portfolio/joe.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                </div>
+                                <div class="project-name">
+                                    Joe
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="bootstrap/img/portfolio/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category3
-                            </div>
-                            <div class="project-name">
-                                Vik
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="bootstrap/img/portfolio/4.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category4
-                            </div>
-                            <div class="project-name">
-                                Jewel
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="bootstrap/img/portfolio/nathan.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                </div>
+                                <div class="project-name">
+                                    Nathan
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="bootstrap/img/portfolio/5.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category5
-                            </div>
-                            <div class="project-name">
-                                Jon
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="bootstrap/img/portfolio/6.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category6
-                            </div>
-                            <div class="project-name">
-                                Thomas
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="bootstrap/img/portfolio/vik.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                </div>
+                                <div class="project-name">
+                                    Vik
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="bootstrap/img/portfolio/jewel.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                </div>
+                                <div class="project-name">
+                                    Jewel
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="bootstrap/img/portfolio/jon.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                </div>
+                                <div class="project-name">
+                                    Jon
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                        <img src="bootstrap/img/portfolio/naman.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                </div>
+                                <div class="project-name">
+                                    Naman
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="contact">
         <div class="container">
             <div class="row">
+              <!-- contact information -->
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">

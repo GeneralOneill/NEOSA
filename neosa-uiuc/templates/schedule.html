@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="scripts/schedule.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,94 +14,115 @@
     <link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/schedule.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/profilepage.css" type="text/css">
 </head>
 <body id="page-top">
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="/">Hey Ü</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="/login">Sign Out</a>
-                    </li>
-
-                </ul>
-            </div>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="/">Welcome</a>
         </div>
-    </nav>
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1>Hello {{current_user}}</h1>
-                <hr>
-                <p>It's short and simple.</p>
-
-                      <table  id="our_table" style='height:20%' cellpadding="0" cellspacing="0"  class="noselect"  >
-                            <tr>
-                              <td>9:00 am</td>
-
-                            </tr>
-                            <tr>
-                              <td>10:00 am</td>
-
-                            </tr>
-                            <tr>
-                              <td>11:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>12:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>1:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>2:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>3:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>4:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>5:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>6:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>7:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>8:00 pm</td>
-
-                            </tr>
-                            <tr>
-                              <td>9:00 pm</td>
-
-                            </tr>
-
-                      </table>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a class="page-scroll" href="/">Home</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="/profilepage">Profile</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="/map">Map</a>
+              </li>
+              <li>
+                <a class="page-scroll" href="/logout">Logout</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <header>
+      <div class="header-content">
+          <div class="header-content-inner">
+              <h1>Hey {{current_user}}</h1>
+              <hr>
+              <p>Find Your Friends</p>
+              <a href="/map" class="btn btn-primary btn-xl page-scroll">Explore</a>
+          </div>
+      </div>
+  </header>
+  <section class="bg-primary" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="header-content">
+                    <div class="header-content-inner">
+                        <h1>Create Your Schdule</h1>
+                        <br>
+                        <!-- <hr> -->
+                        <p>It's short and simple.</p>
 
 
+                                <p >
+                                    <table style='height:20%' cellpadding="0" cellspacing="0"  class="noselect"id="our_table" align="right" style="margin-top:33px"; style="margin-left:100px";>
+                                      <tr>
+                                        <td>9:00 am</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>10:00 am</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>11:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>12:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>1:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>2:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>3:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>4:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>5:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>6:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>7:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>8:00 pm</td>
+
+                                      </tr>
+                                      <tr>
+                                        <td>9:00 pm</td>
+
+                                      </tr>
+                                   </table>
                       <p >
                           <table id="demo" align="right" style="margin-top:33px; margin-left:100px;">
                             <tr>
@@ -163,15 +183,11 @@
                     <!-- <button type="button" id='find_button_id'></button> -->
                     <button id="practice">  Find Me a Buddy! </button>
 
-
-
-
-
-
             </div>
         </div>
     </header>
     <script src="bootstrap/js/jquery.js"></script>
+    <script src="scripts/schedule.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="bootstrap/js/jquery.easing.min.js"></script>
     <script src="bootstrap/js/jquery.fittext.js"></script>
