@@ -46,7 +46,7 @@ def createUser(user,username, major, first_name, last_name, email_address):
 def getAllUsersLatLng():
     # search the data base for all users
     keys = UserModel.query().fetch(keys_only=True)
-    userInfoArray = []
+    userLatLngTupleArray = []
     for key in keys:
         user = key.get()
         # stores the latlng in a dictionary with the user id as key and latlng as the value
@@ -59,7 +59,7 @@ def getAllOtherActiveUsersLatLng():
     # searches the database with active users
     # and return their unique keyss
     keys = UserModel.query(UserModel.isActive == True, UserModel.user_id != user.user_id()).fetch(keys_only=True)
-    userInfoArray = []
+    userLatLngTupleArray = []
     for key in keys:
         user = key.get()
         # adds the user to a dictionary, using id as the key, and the key as the value

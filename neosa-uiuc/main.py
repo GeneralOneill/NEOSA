@@ -68,8 +68,10 @@ class MapHandler(webapp2.RequestHandler):
         user = users.get_current_user()
         template = jinja_environment.get_template('templates/map.html')
         if user:
+            latlng = {'latlng':json.dumps(getAllUsersLatLng())}
+            username = getCurrentUser().get().username
             # renders the map page
-            self.response.out.write(template.render())
+            self.response.out.write(template.render({"username": username}))
         else:
             # if the user is not logged in
             # they are sent to the loging handler to log them in
