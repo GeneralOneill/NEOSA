@@ -1,4 +1,4 @@
-// author Joe Tan & Jonathan Reynolds & Vikrant Sharma
+// author Joe Tan & Jonathan Reynolds
 var map;
 var current_location;
 var currentUsername;
@@ -70,7 +70,7 @@ function activateSocketIO() {
     }, 800);
   });
 }
-//connects to the chat handler 
+//connects to the chat handler
 /**
  * POST to the backend to update the current User's status.
  */

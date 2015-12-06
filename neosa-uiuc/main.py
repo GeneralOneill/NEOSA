@@ -23,6 +23,7 @@ from datetime import datetime
 from google.appengine.api import users
 from neosa import *
 
+
 # sets system Environment
 jinja_environment = jinja2.Environment(
   loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -68,8 +69,10 @@ class MapHandler(webapp2.RequestHandler):
         user = users.get_current_user()
         template = jinja_environment.get_template('templates/map.html')
         if user:
+            template = jinja_environment.get_template('templates/map.html')
+            username = getCurrentUser().get().username
             # renders the map page
-            self.response.out.write(template.render())
+            self.response.out.write(template.render({"username": username}))
         else:
             # if the user is not logged in
             # they are sent to the loging handler to log them in
@@ -92,7 +95,7 @@ class UsersHandler(webapp2.RequestHandler):
         # sets the handler to send json data
         self.response.headers['Content-Type'] = 'application/json';
         # add latlng data to a dicitonary
-        obj = {'latlngArray': getAllOtherActiveUsersLatLng()}
+        obj = {'userInfoArray': getAllOtherActiveUsersLatLng()}
         # sends the data to the map page
         self.response.out.write(json.dumps(obj))
 
@@ -170,10 +173,14 @@ class SubjectHandler(webapp2.RequestHandler):
 # experimental page that is still underdevelopment
 class ProfilePageHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/profilepage.html')
-        self.response.out.write(template.render())
+        user = getCurrentUser().get()
+        if user:
+            template = jinja_environment.get_template('templates/profilepage.html')
+            self.response.out.write(template.render({"user":user}))
+
     def post(self):
-        user = getCurrentUser.get()
+        self.response.headers['Content-Type'] = 'application/json';
+        self.response.out.write(template.render({"user":user}))
 
 # sets the pointers to the appropriate class
 # ie the path in the url

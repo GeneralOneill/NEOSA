@@ -43,6 +43,7 @@ def createUser(user,username, major, first_name, last_name, email_address):
     user.put()
 
 # returns a list containing all user's latlngs
+
 def getAllUsersLatLng():
     # search the data base for all users
     keys = UserModel.query().fetch(keys_only=True)
@@ -50,8 +51,8 @@ def getAllUsersLatLng():
     for key in keys:
         user = key.get()
         # stores the latlng in a dictionary with the user id as key and latlng as the value
-        userLatLngTupleArray.append({"user_id":str(user.user_id), "latlng": user.latlng})
-    return userLatLngTupleArray
+        userInfoArray.append({"user_id":str(user.user_id), "latlng": user.latlng, "username": user.username, "subject": user.subject})
+    return userInfoArray
 
 # returns all of the all active user's latlng excluding the current user that is logged on
 def getAllOtherActiveUsersLatLng():
@@ -63,8 +64,8 @@ def getAllOtherActiveUsersLatLng():
     for key in keys:
         user = key.get()
         # adds the user to a dictionary, using id as the key, and the key as the value
-        userLatLngTupleArray.append({"user_id":str(user.user_id), "latlng": user.latlng})
-    return userLatLngTupleArray
+        userInfoArray.append({"user_id":str(user.user_id), "latlng": user.latlng, "username": user.username, "subject": user.subject})
+    return userInfoArray
 
 # changes the current user's isActive propertie to true
 def setCurretUserActive():
