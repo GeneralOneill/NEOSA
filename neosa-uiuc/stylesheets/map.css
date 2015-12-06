@@ -32,6 +32,11 @@ body {
     text-align: center;
     list-style-type: none;
 }*/
+
+#messagesContainer {
+  background-color: ghostwhite;
+}
+
 #messages {
     list-style-type: none;
     margin: 0;
