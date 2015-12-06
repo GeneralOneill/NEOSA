@@ -63,7 +63,8 @@ def getAllOtherActiveUsersLatLng():
     userInfoArray = []
     for key in keys:
         user = key.get()
-        userInfoArray.append({"user_id":str(user.user_id), "latlng": user.latlng, "username": user.username, "subject": user.subject})
+        # adds the user to a dictionary, using id as the key, and the key as the value
+        userInfoArray.append({"user_id":str(user.user_id), "latlng": user.latlng, "username": user.username})
     return userInfoArray
 
 # changes the current user's isActive propertie to true
