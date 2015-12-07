@@ -91,9 +91,9 @@
                           <br> -->
                           <INPUT TYPE="button" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
                         </form>
-                        
+
                         <!-- all the post stuff is text boxes so that the user can change their information -->
-                      </dv>
+                      </div>
                         <p>
                             <strong>Name:</strong>
                             <span>{{user.first_name + " " + user.last_name}}</span>
@@ -122,76 +122,61 @@
                             <strong>Schedule:</strong>
                             <span>{{user.schedule}}</span>
                         </p>
-
-                        <!-- <p>
-                            <strong>:</strong>
-                            <span>Sirjon</span>
-                        </p> -->
                     </div>
-<!--this is all infomation that is retrieved from the backend, it was documented in main.py and is the user object that was sent -->
+                    <!--this is all infomation that is retrieved from the backend, it was documented in main.py and is the user object that was sent -->
 
                     <!-- Needed because other elements inside ProfilePage have floats -->
                     <div style="clear:both"></div>
                   </div>
                   </br>
+                  <!-- button looks  for nearby buddy for user on google maps (still in testing)-->
                   <button type="button" id='find_button_id'>Find Me A Buddy!</button>
               </div>
               <table  style='height:20px' cellpadding="0" cellspacing="0" id="our_table" class="noselect">
                     <tr>
+                      <td>6:00 am</td>
+                    </tr>
+                    <tr>
                       <td>7:00 am</td>
-
                     </tr>
                     <tr>
                       <td>8:00 am</td>
-
                     </tr>
                     <tr>
                       <td>9:00 am</td>
-
                     </tr>
                     <tr>
                       <td>10:00 am</td>
-
                     </tr>
                     <tr>
                       <td>11:00 am</td>
-
                     </tr>
                     <tr>
                       <td>12:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>1:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>2:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>3:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>4:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>5:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>6:00 pm</td>
-
                     </tr>
                     <tr>
                       <td>7:00 pm</td>
-
                     </tr>
               </table>
           </div>
-
       </div>
   </section>
     <script src="bootstrap/js/jquery.js"></script>
