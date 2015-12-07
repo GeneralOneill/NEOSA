@@ -91,43 +91,56 @@
                           <br> -->
                           <INPUT TYPE="button" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
                         </form>
-
+<br>
                         <!-- all the post stuff is text boxes so that the user can change their information -->
+                        <table  bgcolor="#9E4040" style="width:100%">
+                          <tr>
+                            <td><p>
+                                <strong>Name:</strong>
+                                <span>{{user.first_name + " " + user.last_name}}</span>
+                            </p></td>
+                            <td><p>
+                                <strong>University:</strong>
+                                <span>University of Illinois at Urbana-Champaign</span>
+                            </p></td>
+                            <td><p>
+                                <strong>Major:</strong>
+                                <span>{{user.major}}</span>
+                            </p></td>
+
+                        </table>
+
+                        </body>
+                        </html>
+                    <br>
+                        </div>
+                          <p>
+                              <strong>Subject:</strong>
+                              <span>{{user.subject}}</span>
+                          </p>
+                          <p>
+                              <strong>Friends:</strong>
+                              <span>{{user.friends}}</span>
+                          </p>
+                          <p>
+                              <strong>Email:</strong>
+                              <span>{{user.email_address}}</span>
+                          </p>
+                          <p>
+                              <strong>Schedule:</strong>
+                              <span>{{user.schedule}}</span>
+                          </p>
                       </div>
-                        <p>
-                            <strong>Name:</strong>
-                            <span>{{user.first_name + " " + user.last_name}}</span>
-                        </p>
-                        <p>
-                            <strong>University:</strong>
-                            <span>University of Illinois at Urbana-Champaign</span>
-                        </p>
-                        <p>
-                            <strong>Major:</strong>
-                            <span>{{user.major}}</span>
-                        </p>
-                        <p>
-                            <strong>Subject:</strong>
-                            <span>{{user.subject}}</span>
-                        </p>
-                        <p>
-                            <strong>Friends:</strong>
-                            <span>{{user.friends}}</span>
-                        </p>
-                        <p>
-                            <strong>Email:</strong>
-                            <span>{{user.email_address}}</span>
-                        </p>
-                        <p>
-                            <strong>Schedule:</strong>
-                            <span>{{user.schedule}}</span>
-                        </p>
+                      <!--this is all infomation that is retrieved from the backend, it was documented in main.py and is the user object that was sent -->
+                      <!-- Needed because other elements inside ProfilePage have floats -->
+                      <div style="clear:both"></div>
                     </div>
-                    <!--this is all infomation that is retrieved from the backend, it was documented in main.py and is the user object that was sent -->
-                    <!-- Needed because other elements inside ProfilePage have floats -->
-                    <div style="clear:both"></div>
-                  </div>
-                  </br>
+                    </br>
+                    <!DOCTYPE html>
+                    <html>
+                    <body>
+
+
                   <!-- button looks  for nearby buddy for user on google maps (still in testing)-->
                   <button onclick="location.href = 'http://localhost:8080/map';" id="Find me a buddy!" class="btn btn-default btn-xl" >Find me a buddy!</button>
               </div>
