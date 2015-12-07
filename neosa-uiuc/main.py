@@ -174,9 +174,12 @@ class SubjectHandler(webapp2.RequestHandler):
 class ProfilePageHandler(webapp2.RequestHandler):
     def get(self):
         user = getCurrentUser().get()
+        #this gets all the user information so that the page can be dynamic
         if user:
+            #if the user is logged on then we can call all of the user properties
             template = jinja_environment.get_template('templates/profilepage.html')
             self.response.out.write(template.render({"user":user}))
+            #we are sending the user dictionary as an object to the profile page 
 
     def post(self):
         self.response.headers['Content-Type'] = 'application/json';
