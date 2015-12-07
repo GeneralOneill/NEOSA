@@ -33,10 +33,6 @@ body {
     list-style-type: none;
 }*/
 
-#messagesContainer {
-  background-color: ghostwhite;
-}
-
 #messages {
     list-style-type: none;
     margin: 0;
@@ -70,4 +66,10 @@ body {
 }
 .no-overflow {
     overflow: hidden;
+}
+
+nav {
+    background-color: black!important;
+    margin: 0!important;
+    position: inherit!important;
 }

@@ -349,6 +349,23 @@ table td {
   border:1px solid #fff;
 }
 
+table {
+    background-color:#ccc;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+table tr:first-child td{
+  border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+table tr:last-child td {
+  border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
 table td.highlighted {
   background-color: #1fe9ee;
 }

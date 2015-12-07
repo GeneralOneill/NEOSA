@@ -35,17 +35,20 @@
                 <h1>What do you want to work on today?</h1>
                 <hr>
                 <p></p>
-                <form method="post">
-                  <select  name="subject">
-                    <option value="math">Math</option>
-                    <option value="physics">Physics</option>
-                    <option value="chemistry">Chemistry</option>
-                    <option value="biology">Biology</option>
-                    <option value="computer_science">Computer Science</option>
-                    <option value="english">English</option>
-                    <option value="arts">Arts</option>
-                  </select>
-                  <input type="submit" value="Update">
+                <form method="post" class="form-inline">
+                  <div class="form-group">
+                    <!-- <label for="sel1">Subject list:</label> -->
+                    <select name = subject class="form-control" id="sel1">
+                      <option value="math">Math</option>
+                      <option value="physics">Physics</option>
+                      <option value="chemistry">Chemistry</option>
+                      <option value="biology">Biology</option>
+                      <option value="computer_science">Computer Science</option>
+                      <option value="english">English</option>
+                      <option value="arts">Arts</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-default" type="submit" value="Update">Update</button>
                 </form>
             </div>
         </div>

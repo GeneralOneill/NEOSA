@@ -59,7 +59,8 @@
   <section class="bg-primary" id="about">
       <div class="container">
           <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
+
+              <div class="col-md-8 text-center">
                   <h2 class="section-heading">Your Profile</h2>
                   <hr class="light">
                   <p class="text-faded"></p>
@@ -72,34 +73,56 @@
                       </div>
                     </div>
                     <div id="Info">
-                        <p>
-                            <strong>Name:</strong>
-                            <span>{{user.first_name + " " + user.last_name}}</span>
-                        </p>
-                        <p>
-                            <strong>University:</strong>
-                            <span>University of Illinois at Urbana-Champaign</span>
-                        </p>
-                        <p>
-                            <strong>Major:</strong>
-                            <span>{{user.major}}</span>
-                        </p>
-                        <p>
-                            <strong>Subject:</strong>
-                            <span>{{user.subject}}</span>
-                        </p>
-                        <p>
-                            <strong>Friends:</strong>
-                            <span>{{user.friends}}</span>
-                        </p>
-                        <p>
-                            <strong>Email:</strong>
-                            <span>{{user.email_address}}</span>
-                        </p>
-                        <p>
-                            <strong>Schedule:</strong>
-                            <span>{{user.schedule}}</span>
-                        </p>
+                      <div class="row text-left">
+                        <div class="col-md-3">
+
+                            <p>
+                                <strong>Name:</strong>
+                            </p>
+                            <p>
+                                <strong>University:</strong>
+                            </p>
+                            <p>
+                                <strong>Major:</strong>
+                            </p>
+                            <p>
+                                <strong>Subject:</strong>
+                            </p>
+                            <p>
+                                <strong>Friends:</strong>
+                            </p>
+                            <p>
+                                <strong>Email:</strong>
+                            </p>
+                            <p>
+                                <strong>Schedule:</strong>
+                            </p>
+                        </div>
+                          <div class="col-md-9">
+
+                              <p>
+                                  <span>{{user.first_name + " " + user.last_name}}</span>
+                              </p>
+                              <p>
+                                  <span>University of Illinois at Urbana-Champaign</span>
+                              </p>
+                              <p>
+                                  <span>{{user.major}}</span>
+                              </p>
+                              <p>
+                                  <span>{{user.subject}}</span>
+                              </p>
+                              <p>
+                                  <span>{{user.friends}}</span>
+                              </p>
+                              <p>
+                                  <span>{{user.email_address}}</span>
+                              </p>
+                              <p>
+                                  <span>{{user.schedule}}</span>
+                              </p>
+                          </div>
+                      </div>
 
                         <!-- <p>
                             <strong>:</strong>
@@ -111,9 +134,11 @@
                     <div style="clear:both"></div>
                   </div>
                   </br>
-                  <button type="button" id='find_button_id'>Find Me A Buddy!</button>
+                  <button type="button" class="btn btn-default btn-xl" id='find_button_id'>Find Me A Buddy!</button>
               </div>
-              <table  style='height:20px' cellpadding="0" cellspacing="0" id="our_table" class="noselect">
+
+              <div class="col-md-4">
+                <table cellpadding="0" cellspacing="0" id="our_table" class="noselect table table-bordered">
                     <tr>
                       <td>7:00 am</td>
 
@@ -166,7 +191,8 @@
                       <td>7:00 pm</td>
 
                     </tr>
-              </table>
+                  </table>
+                </div>
           </div>
 
       </div>

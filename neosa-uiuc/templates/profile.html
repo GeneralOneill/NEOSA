@@ -15,63 +15,91 @@
     <link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
     <link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
 </head>
-  <body>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-              <!-- Home button leading back to original page -->
-              <a class="page-scroll" href="/">Home</a>
-          </li>
-          <li>
-              <!-- Leads to profile page html -->
-              <a class="page-scroll" href="/profilepage">Profile</a>
-          </li>
-          <li>
-              <!-- leads to schedule page html -->
-              <a class="page-scroll" href="/schedule">Schedule</a>
-          </li>
-          <li>
-              <!-- leads to maps page html -->
-              <a class="page-scroll" href="/map">Map</a>
-          </li>
-          <li>
-              <!-- leads to about page -->
-              <a class="page-scroll" href="#portfolio">About</a>
-          </li>
-          <li>
-              <!-- leads to contact page  -->
-              <a class="page-scroll" href="#contact">Contact</a>
-          </li>
-          <li>
-            <!-- logout page -->
-            <a class="page-scroll" href="/logout">Logout</a>
-          </li>
-        </ul>
+<body>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- controls scrolling mechanism when user clicks specific info tab -->
+            <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <!-- Home button leading back to original page -->
+                  <a class="page-scroll" href="/">Home</a>
+              </li>
+              <li>
+                  <!-- Leads to profile page html -->
+                  <a class="page-scroll" href="/profilepage">Profile</a>
+              </li>
+              <li>
+                  <!-- leads to schedule page html -->
+                  <a class="page-scroll" href="/schedule">Schedule</a>
+              </li>
+              <li>
+                  <!-- leads to maps page html -->
+                  <a class="page-scroll" href="/map">Map</a>
+              </li>
+              <li>
+                  <!-- leads to about page -->
+                  <a class="page-scroll" href="#portfolio">About</a>
+              </li>
+              <li>
+                  <!-- leads to contact page  -->
+                  <a class="page-scroll" href="#contact">Contact</a>
+              </li>
+              <li>
+                <!-- logout page -->
+                <a class="page-scroll" href="/logout">Logout</a>
+              </li>
+            </ul>
+        </div>
     </div>
+</nav>
     <header>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>Profile Page</h1>
                 <hr>
                 <p>It's short and simple.</p>
-                <form method="post">
-                  <input type="text" name="first_name" placeholder="First Name">
-                  <br>
-                  <br>
-                  <input type="text" name="last_name" placeholder="Last Name">
-                  <br>
-                  <br>
-                  <input type="text" name="username" placeholder="Username">
-                  <br>
-                  <br>
-                  <input type="text" name="major" placeholder="Major">
-                  <br>
-                  <br>
-                  <!-- <input type="text" name="date_of_birth" placeholder="Date of Birth">
-                  <br>
-                  <br> -->
-                  <input type="submit" value="Update" class="btn btn-primary btn-xl">
-                </form>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4">
+                    <form method="post">
+
+                      <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" name="first_name" placeholder="First Name" id="firstName">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" placeholder="Last Name" id="lastName">
+                      </div>
+
+
+                      <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" id="username">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="major">Major</label>
+                        <input type="text" class="form-control" name="major" placeholder="Major" id="major">
+                      </div>
+                      <!-- <input type="text" name="date_of_birth" placeholder="Date of Birth">
+                      <br>
+                      <br> -->
+                      <input type="submit" value="Update" class="btn btn-primary btn-xl">
+                    </form>
+                  </div>
+                </div>
+
             </div>
         </div>
     </header>

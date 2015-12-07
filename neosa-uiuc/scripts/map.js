@@ -29,7 +29,7 @@ function setUsernameStyles(){
   currentUsername = $('#username').html();
   var style = document.createElement('style');
   style.type = 'text/css';
-  style.innerHTML = 'li.' + currentUsername + " {text-align:right; background-color: rgb(123, 213, 237)!important;}";
+  style.innerHTML = 'li.' + currentUsername + " {text-align:right; background-color: rgb(198, 236, 169)!important;}";
   document.getElementsByTagName('head')[0].appendChild(style);
 }
 

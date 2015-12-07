@@ -16,25 +16,39 @@
     <link href="stylesheets/map.css" type="text/css" rel="stylesheet"></link>
   </head>
   <body>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-              <a class="page-scroll" href="/">Home</a>
-          </li>
-          <li>
-              <a class="page-scroll" href="/profilepage">Profile</a>
-          </li>
-          <li>
-              <a class="page-scroll" href="/schedule">Schedule</a>
-          </li>
-          <li>
-            <a>Logged in as <span id="username">{{username}}</span></a>
-          </li>
-          <li>
-            <a class="page-scroll" href="/logout">Logout</a>
-          </li>
-        </ul>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- controls scrolling mechanism when user clicks specific info tab -->
+            <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+        </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="page-scroll" href="/">Home</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="/profilepage">Profile</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="/schedule">Schedule</a>
+            </li>
+            <li>
+              <a>Logged in as <span id="username">{{username}}</span></a>
+            </li>
+            <li>
+              <a class="page-scroll" href="/logout">Logout</a>
+            </li>
+          </ul>
+      </div>
     </div>
+</nav>
     <div id="map"></div>
     </div>
     <div  id="messagesContainer" class="no-overflow">
