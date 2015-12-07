@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- title page -->
     <title>Hey Ü | Profile</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -49,9 +49,12 @@
   <header>
       <div class="header-content">
           <div class="header-content-inner">
+            <!-- welcomes and displays current user -->
               <h1>Hey {{current_user}}</h1>
               <hr>
+              <!-- allows users to click to find nearby friends -->
               <p>Find Your Friends</p>
+              <!-- explore button leads them to maps for finding buddies -->
               <a href="/map" class="btn btn-primary btn-xl page-scroll">Explore</a>
           </div>
       </div>
@@ -60,6 +63,7 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <!-- Start of profile page -->
                   <h2 class="section-heading">Your Profile</h2>
                   <hr class="light">
                   <p class="text-faded"></p>
@@ -67,36 +71,44 @@
                   <div id="ProfilePage">
                     <div id="LeftCol">
                       <div id="Photo"></div>
+                      <!-- displays current name of user -->
                       <div id="ProfileOptions">
                         {{current_user}}
                       </div>
                     </div>
                     <div id="Info">
                         <p>
+                            <!-- displays current user logged in -->
                             <strong>Name:</strong>
                             <span>{{user.first_name + " " + user.last_name}}</span>
                         </p>
                         <p>
+                            <!-- displays user's university -->
                             <strong>University:</strong>
                             <span>University of Illinois at Urbana-Champaign</span>
                         </p>
                         <p>
+                            <!-- displays user's major -->
                             <strong>Major:</strong>
                             <span>{{user.major}}</span>
                         </p>
                         <p>
+                            <!-- displays user's current subject for study session -->
                             <strong>Subject:</strong>
                             <span>{{user.subject}}</span>
                         </p>
                         <p>
+                            <!-- displays user's list of friends -->
                             <strong>Friends:</strong>
                             <span>{{user.friends}}</span>
                         </p>
                         <p>
+                            <!-- displays user's email -->
                             <strong>Email:</strong>
                             <span>{{user.email_address}}</span>
                         </p>
                         <p>
+                            <!-- displays user's schedule -->
                             <strong>Schedule:</strong>
                             <span>{{user.schedule}}</span>
                         </p>
@@ -113,6 +125,8 @@
                   </br>
                   <button type="button" id='find_button_id'>Find Me A Buddy!</button>
               </div>
+
+              <!-- time slots for user's availability -->
               <table  style='height:20px' cellpadding="0" cellspacing="0" id="our_table" class="noselect">
                     <tr>
                       <td>7:00 am</td>
@@ -171,6 +185,7 @@
 
       </div>
   </section>
+  
     <script src="bootstrap/js/jquery.js"></script>
     <script src="scripts/schedule.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
