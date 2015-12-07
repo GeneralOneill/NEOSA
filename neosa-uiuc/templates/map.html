@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
     <link href="stylesheets/map.css" type="text/css" rel="stylesheet"></link>
   </head>
-  <body>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+  <body id="">
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li>
               <a class="page-scroll" href="/">Home</a>
@@ -34,9 +35,49 @@
             <a class="page-scroll" href="/logout">Logout</a>
           </li>
         </ul>
-    </div>
+    </div> -->
+
+    <!-- temp solution for header on css -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top btn-primary">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a class="page-scroll" href="/">Home</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="/profilepage">Profile</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="/schedule">Schedule</a>
+                  </li>
+                  <li>
+                    <a>Logged in as <span id="username">{{username}}</span></a>
+                  </li>
+                  <li>
+                    <a class="page-scroll" href="/logout">Logout</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- testing page breaks -->
+    <br>
+    <br>
+    <br>
+
     <div id="map"></div>
-    </div>
+
     <div  id="messagesContainer" class="no-overflow">
         <h2 class="section-heading text-center">Messages</h2>
         <div id="messagesParent">
@@ -60,3 +101,38 @@
     <script src="bootstrap/js/creative.js"></script>
   </body>
 </html>
+
+
+
+<!-- <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                  <a class="page-scroll" href="/">Home</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="/profilepage">Profile</a>
+              </li>
+              <li>
+                  <a class="page-scroll" href="/schedule">Schedule</a>
+              </li>
+              <li>
+                <a>Logged in as <span id="username">{{username}}</span></a>
+              </li>
+              <li>
+                <a class="page-scroll" href="/logout">Logout</a>
+              </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
