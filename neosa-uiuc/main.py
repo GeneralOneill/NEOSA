@@ -102,7 +102,7 @@ class UsersHandler(webapp2.RequestHandler):
 # logs the user out
 class LogoutHandler(webapp2.RequestHandler):
     def get(self):
-        setCurrentUserInactive():
+        setCurrentUserInactive()
         self.redirect(users.create_logout_url('/'))
 
 # logs the user in
