@@ -68,7 +68,7 @@ def getAllOtherActiveUsersLatLng():
     return userInfoArray
 
 # changes the current user's isActive propertie to true
-def setCurretUserActive():
+def setCurrentUserActive():
     # gets the current user
     user = getCurrentUser().get()
     # changes the user's isActive propertie to true
@@ -76,7 +76,7 @@ def setCurretUserActive():
     user.put()
 
 # changes the current user's isActive propertie to false
-def setCurretUserInactive():
+def setCurrentUserInactive():
     # gets the current user
     user = getCurrentUser().get()
     # changes the user's isActive propertie to false
