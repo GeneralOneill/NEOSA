@@ -76,10 +76,7 @@
 								<div class="col-md-3">
 									<p>
 										<strong>Name:</strong>
-									</p>
-									<p>
-										<strong>University:</strong>
-									</p>
+									</p>								
 									<p>
 										<strong>Major:</strong>
 									</p>
@@ -101,9 +98,6 @@
 										<span>{{user.first_name + " " + user.last_name}}</span>
 									</p>
 									<p>
-										<span>University of Illinois at Urbana-Champaign</span>
-									</p>
-									<p>
 										<span>{{user.major}}</span>
 									</p>
 									<p>
@@ -117,9 +111,13 @@
 									</p>
 									<p>
 										<span>
-										{% for time in user.schedule %}
-										<h1>{{item}}item</h1>
-										{% endfor %}
+											<table>
+											{% for time in user.schedule %}
+											<tr>
+												<td>{{time}} UTC</td>
+											{% endfor %}
+										</tr>
+										</table>
 										</span>
 									</p>
 								</div>
@@ -128,54 +126,10 @@
 							<div style="clear:both"></div>
 						</div>
 						</br>
-						<!-- button looks  for nearby buddy for user on google maps (still in testing)-->
-						<button onclick="location.href = 'http://localhost:8080/map';" id="Find me a buddy!" class="btn btn-default btn-xl" >Find me a buddy!</button>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<table cellpadding="0" cellspacing="0" id="our_table" class="noselect table table-bordered">
-						<tr>
-							<td>7:00 am</td>
-						</tr>
-						<tr>
-							<td>8:00 am</td>
-						</tr>
-						<tr>
-							<td>9:00 am</td>
-						</tr>
-						<tr>
-							<td>10:00 am</td>
-						</tr>
-						<tr>
-							<td>11:00 am</td>
-						</tr>
-						<tr>
-							<td>12:00 pm</td>
-						</tr>
-						<tr>
-							<td>1:00 pm</td>
-						</tr>
-						<tr>
-							<td>2:00 pm</td>
-						</tr>
-						<tr>
-							<td>3:00 pm</td>
-						</tr>
-						<tr>
-							<td>4:00 pm</td>
-						</tr>
-						<tr>
-							<td>5:00 pm</td>
-						</tr>
-						<tr>
-							<td>6:00 pm</td>
-						</tr>
-						<tr>
-							<td>7:00 pm</td>
-						</tr>
-					</table>
-				</div>
 			</div>
+
 			<div>
 				<br>
 			<div class="col-md-4 col-md-offset-4 text-center">
@@ -199,12 +153,13 @@
 						<label for="major">Major</label>
 						<input type="text" class="form-control" name="major" value="{{user.major}}" id="major">
 					</div>
-					<INPUT type="Submit" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
+					<!-- button to allow user to find a study buddy -->
+					<!-- <button type="button" class="btn btn-default btn-xl" id='find_button_id'>Update</button> -->
+					<input type="Submit" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
 				</form>
 			</div>
 		</section>
 		<script src="bootstrap/js/jquery.js"></script>
-		<script src="scripts/schedule.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="bootstrap/js/jquery.easing.min.js"></script>
 		<script src="bootstrap/js/jquery.fittext.js"></script>
