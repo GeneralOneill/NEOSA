@@ -60,7 +60,7 @@ class MainHandler(webapp2.RequestHandler):
             self.response.out.write(template.render(current_user))
     def post(self):
         # sets the user's activty to active
-        setCurretUserActive()
+        setCurrentUserActive()
 
 # renders the map page
 # handles the post requests from the map page
@@ -102,6 +102,7 @@ class UsersHandler(webapp2.RequestHandler):
 # logs the user out
 class LogoutHandler(webapp2.RequestHandler):
     def get(self):
+        setCurrentUserInactive():
         self.redirect(users.create_logout_url('/'))
 
 # logs the user in
@@ -179,7 +180,7 @@ class ProfilePageHandler(webapp2.RequestHandler):
             #if the user is logged on then we can call all of the user properties
             template = jinja_environment.get_template('templates/profilepage.html')
             self.response.out.write(template.render({"user":user}))
-            #we are sending the user dictionary as an object to the profile page 
+            #we are sending the user dictionary as an object to the profile page
 
     def post(self):
         self.response.headers['Content-Type'] = 'application/json';
