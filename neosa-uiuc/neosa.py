@@ -1,6 +1,7 @@
 # Author Joe Tan
 from google.appengine.ext import ndb
 from google.appengine.api import users
+import logging
 
 
 # The User class with all of its properties
@@ -35,6 +36,15 @@ def getCurrentUser():
         if len(user) > 0:
             key = user[0]
     return key
+
+# gets the user key based on user name
+def getUser(username):
+    # if the search returns a none empty list
+    # ie finding the perspective user
+    user =  UserModel.query(UserModel.username == username).fetch(keys_only = True)
+    # logging.error(user)
+    return user[0]
+
 
 # create a user class and initalizes its properties,
 # then stores the user into the database

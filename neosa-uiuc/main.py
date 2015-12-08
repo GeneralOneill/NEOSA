@@ -187,7 +187,6 @@ class ProfilePageHandler(webapp2.RequestHandler):
             template = jinja_environment.get_template('templates/profilepage.html')
             self.response.out.write(template.render({"user":user}))
             #we are sending the user dictionary as an object to the profile page
-
     def post(self):
         user = getCurrentUser().get()
         user.first_name = self.request.get("first_name")
@@ -198,6 +197,16 @@ class ProfilePageHandler(webapp2.RequestHandler):
         # self.response.out.write(user.first_name)
         self.redirect('/profilepage')
 
+# display the profilepage of a friend
+class FriendXHandler(webapp2.RequestHandler):
+    def get(self):
+        # gets friends user name
+        username = self.request.get('username')
+        user = getUser(username).get()
+        #this gets all the user information so that the page can be dynamic
+        template = jinja_environment.get_template('templates/friendX.html')
+        self.response.out.write(template.render({"user":user}))
+        #we are sending the user dictionary as an object to the profile page
 
 # sets the pointers to the appropriate class
 # ie the path in the url
@@ -213,5 +222,6 @@ app = webapp2.WSGIApplication([
     ('/logout', LogoutHandler),
     ('/subject', SubjectHandler),
     ('/addFriend', addFriend),
+    ('/friendX', FriendXHandler),
     ('/.*', MainHandler)
 ], debug=True)
