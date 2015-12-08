@@ -50,7 +50,7 @@
 		<header>
 			<div class="header-content">
 				<div class="header-content-inner">
-					<h1>Hey {{current_user}}</h1>
+					<h1>Hey {{user.first_name}}</h1>
 					<hr>
 					<p>Find Your Friends</p>
 					<a href="/map" class="btn btn-primary btn-xl page-scroll">Explore</a>
@@ -76,7 +76,7 @@
 								<div class="col-md-3">
 									<p>
 										<strong>Name:</strong>
-									</p>								
+									</p>
 									<p>
 										<strong>Major:</strong>
 									</p>
@@ -88,9 +88,6 @@
 									</p>
 									<p>
 										<strong>Email:</strong>
-									</p>
-									<p>
-										<strong>Schedule:</strong>
 									</p>
 								</div>
 								<div class="col-md-9">
@@ -108,17 +105,6 @@
 									</p>
 									<p>
 										<span>{{user.email_address}}</span>
-									</p>
-									<p>
-										<span>
-											<table>
-											{% for time in user.schedule %}
-											<tr>
-												<td>{{time}} UTC</td>
-											{% endfor %}
-										</tr>
-										</table>
-										</span>
 									</p>
 								</div>
 							</div>

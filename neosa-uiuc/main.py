@@ -28,14 +28,19 @@ from neosa import *
 jinja_environment = jinja2.Environment(
   loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
-# this class is used for testing experimental codes
-class Test(webapp2.RequestHandler):
+# sets user to active
+class setUserActive(webapp2.RequestHandler):
     def get(self):
         user = getCurrentUser().get()
-        for date in user.schedule:
-            self.response.out.write('%s --- ' %(date))
-        # template = jinja_environment.get_template('templates/subject.html')
-        # self.response.out.write(template.render())
+        user.isActive = True
+        user.put()
+
+# sets user to inactive
+class setUserInActive(webapp2.RequestHandler):
+    def get(self):
+        user = getCurrentUser().get()
+        user.isActive = False
+        user.put()
 
 # handles the rendering of the homepage
 # checks if the user is logged in
@@ -113,24 +118,19 @@ class LoginHandler(webapp2.RequestHandler):
 
 class ScheduleHandler(webapp2.RequestHandler):
     def get(self):
-        user = getCurrentUser()
-        current_user = {'current_user':'Stranger'}
-        first_name = user.get().first_name
-        current_user['current_user'] = first_name
+        user = getCurrentUser().get()
         template = jinja_environment.get_template('templates/schedule.html')
-        self.response.out.write(template.render(current_user))
+        self.response.out.write(template.render({"user":user}))
     def post(self):
         user = users.get_current_user()
-        if user:
-            user = getCurrentUser().get()
-            data = json.loads(self.request.body);
-            schedule = data["schedule"];
-            #Make python friendly date objects
-            dates = [datetime.strptime(dateString, "%a, %d %b %Y %H:%M:%S %Z") for dateString in schedule]
-            #store these in user
-            user.schedule = dates
-            user.put()
-            logging.error(dates)
+        user = getCurrentUser().get()
+        data = json.loads(self.request.body);
+        schedule = data["schedule"];
+        #Make python friendly date objects
+        dates = [datetime.strptime(dateString, "%a, %d %b %Y %H:%M:%S %Z") for dateString in schedule]
+        #store these in user
+        user.schedule = dates
+        user.put()
 
 # Handles POST requests from the progile page
 # uses the data from post to update the user's information in the database
@@ -202,7 +202,8 @@ app = webapp2.WSGIApplication([
     ('/profilepage', ProfilePageHandler),
     ('/login', LoginHandler),
     ('/schedule', ScheduleHandler),
-    ('/test', Test),
+    ('/setActive', setUserActive),
+    ('/setInactive', setUserInActive),
     ('/logout', LogoutHandler),
     ('/subject', SubjectHandler),
     ('/.*', MainHandler)

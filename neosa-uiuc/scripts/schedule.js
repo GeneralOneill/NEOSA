@@ -76,6 +76,7 @@ $(document).ready(function(){
         success:
         function(data){
           console.log("Data:"+data);
+          location.reload();
         },
         error:
         function(data){

@@ -221,6 +221,22 @@ function initialize() {
   activateSocketIO();
 }
 
+// sets user to Active
+$(window).focus(function() {
+  jQuery.ajax({
+    type: 'GET',
+    url: "/setActive",
+  });
+});
+
+// sets user to Inactive
+$(window).blur(function() {
+  jQuery.ajax({
+    type: 'GET',
+    url: "/setInactive",
+  });
+});
+
 /**
  * Create and add styles to the page for the current logged-in user.
  */

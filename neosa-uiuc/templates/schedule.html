@@ -55,7 +55,7 @@
 			<div class="header-content">
 				<div class="header-content-inner">
 					<!-- welcomes and displays current user on webapp -->
-					<h1>Hey {{current_user}}</h1>
+					<h1>Hey {{user.first_name}}</h1>
 					<hr>
 					<!-- button to let user find nearby study buddies -->
 					<p>Find Your Friends</p>
@@ -117,12 +117,24 @@
 										</tr>
 									</table>
 								</div>
-
 								</br>
 								<!-- button to allow user to find a study buddy -->
 								<button type="button" class="btn btn-default btn-xl" id='find_button_id'>Update</button>
 							</div>
-						</div>
+								<div class="col-md-9">
+									<p>
+										<span>
+											<table>
+											{% for time in user.schedule %}
+											<tr>
+												<td>{{time}} UTC</td>
+											{% endfor %}
+										</tr>
+										</table>
+										</span>
+									</p>
+								</div>
+							</div>
 					</div>
 				</div>
 			</div>
