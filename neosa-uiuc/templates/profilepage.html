@@ -116,7 +116,15 @@
 										<span>{{user.email_address}}</span>
 									</p>
 									<p>
-										<span>{{user.schedule}}</span>
+										<span>
+											<table>
+											{% for time in user.schedule %}
+											<tr>
+												<td>{{time}} UTC</td>
+											{% endfor %}
+										</tr>
+										</table>
+										</span>
 									</p>
 								</div>
 							</div>
@@ -195,7 +203,7 @@
 						<label for="major">Major</label>
 						<input type="text" class="form-control" name="major" value="{{user.major}}" id="major">
 					</div>
-					<INPUT type="Submit" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
+					<input type="Submit" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
 				</form>
 			</div>
 		</section>
