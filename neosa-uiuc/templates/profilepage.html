@@ -116,7 +116,11 @@
 										<span>{{user.email_address}}</span>
 									</p>
 									<p>
-										<span>{{user.schedule}}</span>
+										<span>
+										{% for time in user.schedule %}
+										<h1>{{item}}item</h1>
+										{% endfor %}
+										</span>
 									</p>
 								</div>
 							</div>
