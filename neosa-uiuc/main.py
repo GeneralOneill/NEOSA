@@ -42,6 +42,10 @@ class setUserInActive(webapp2.RequestHandler):
         user.isActive = False
         user.put()
 
+class addFriend(webapp2.RequestHandler):
+    def post(self):
+        addFriend(self.request.get('username'))
+
 # handles the rendering of the homepage
 # checks if the user is logged in
 # if the user is not logged it, they have less privilages
@@ -63,9 +67,6 @@ class MainHandler(webapp2.RequestHandler):
             # if user is not logged in they are rendered a different page
             template = jinja_environment.get_template('templates/index0.html')
             self.response.out.write(template.render(current_user))
-    def post(self):
-        # sets the user's activty to active
-        setCurrentUserActive()
 
 # renders the map page
 # handles the post requests from the map page
@@ -206,5 +207,6 @@ app = webapp2.WSGIApplication([
     ('/setInactive', setUserInActive),
     ('/logout', LogoutHandler),
     ('/subject', SubjectHandler),
+    ('/addFriend', addFriend),
     ('/.*', MainHandler)
 ], debug=True)

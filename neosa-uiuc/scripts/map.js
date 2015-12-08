@@ -217,7 +217,6 @@ function initialize() {
   getUserLocation();
   getAllActiveUsersLatLng()
   setInterval(getAllActiveUsersLatLng, 30000);
-  setUserActive();
   activateSocketIO();
 }
 
@@ -286,15 +285,6 @@ function activateSocketIO() {
   });
 }
 //connects to the chat handler
-/**
- * POST to the backend to update the current User's status.
- */
-function setUserActive(){
-  $.ajax({
-    type: "POST",
-    url: "/"
-  });
-}
 
 /**
  * Try to initialize Google Map API's geolocation functionality.
@@ -424,6 +414,18 @@ function setUsersPositions(userInfoArray){
   }
 }
 
+function addFriend(username){
+  console.log(username);
+  jQuery.ajax({
+    type: 'POST',
+    url: "/addFriend",
+    data: {'username':username},
+    success: function(data){
+        alert('Added ' + username + " to Friends!");
+    }
+  });
+}
+
 /**
  * Create marker for users other than current user.
  * @param {JSON} object
@@ -432,7 +434,7 @@ function setUsersPositions(userInfoArray){
 function createUsersMarker(object){
   var latLng = object.latlng;
   var userId = object.user_id;
-  var username = object.username;
+  var user_name = object.username;
   var userSubject = object.subject;
   var pinColor = "FE7569";
   var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
@@ -441,9 +443,11 @@ function createUsersMarker(object){
     new google.maps.Point(10, 34));
 
   var contentString = '<div id="content">'+
-    '<h4>' + username + '</h4>' +
+    '<h4>' + user_name + '</h4>' +
     '<p>Wants to study: '+ userSubject + '.</p>' +
-    '</div>';
+    '</div>' + '<div id="addFriend">' +
+    '<h4 onclick="addFriend(\''+user_name+'\')"> Add Friend </h4></div>';
+
   var infoWindow = new google.maps.InfoWindow({
     content: contentString
   });

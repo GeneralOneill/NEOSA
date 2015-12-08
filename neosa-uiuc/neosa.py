@@ -87,7 +87,7 @@ def addFriend(username):
     other = UserModel.query(UserModel.username == username).fetch(keys_only = True)
     user = getCurrentUser().get()
     if(len(other) > 0 and other not in user.friends):
-        user.friends.append(other[0])
+        user.friends = (other[0])
         user.put()
 
 def getFriends():
