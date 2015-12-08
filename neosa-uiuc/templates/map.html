@@ -1,76 +1,75 @@
 <!-- author Joe Tan and Jonathan Reynolds-->
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?keyAIzaSyAB6DLyolHXse5MgXizQzyd4JxGeKUk14U&callback"></script>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="scripts/map.js"></script>
-    <script src="bootstrap/js/jquery.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
-    <link href="stylesheets/map.css" type="text/css" rel="stylesheet"></link>
-  </head>
-  <body>
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top btn-primary">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- controls scrolling mechanism when user clicks specific info tab -->
-            <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
-        </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a class="page-scroll" href="/">Home</a>
-            </li>
-            <li>
-                <a class="page-scroll" href="/profilepage">Profile</a>
-            </li>
-            <li>
-                <a class="page-scroll" href="/schedule">Schedule</a>
-            </li>
-            <li>
-              <a>Logged in as <span id="username">{{username}}</span></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="/logout">Logout</a>
-            </li>
-          </ul>
-      </div>
-    </div>
-</nav>
-    <div id="map"></div>
-
-    <div  id="messagesContainer" class="no-overflow">
-        <h2 class="section-heading text-center">Messages</h2>
-        <div id="messagesParent">
-          <ul id="messages"></ul>
-          <form action="">
-            <div class="input-group">
-              <input id="m"  type="text" class="form-control" autocomplete="off"/>
-              <span class="input-group-btn">
-                <button class="btn btn-secondary" type="submit">Send</button>
-              </span>
-            </div>
-          </form>
-        </div>
-    </div>
-
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/jquery.easing.min.js"></script>
-    <script src="bootstrap/js/jquery.fittext.js"></script>
-    <script src="bootstrap/js/wow.min.js"></script>
-    <script src="bootstrap/js/creative.js"></script>
-  </body>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?keyAIzaSyAB6DLyolHXse5MgXizQzyd4JxGeKUk14U&callback"></script>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="scripts/map.js"></script>
+		<script src="bootstrap/js/jquery.js"></script>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
+		<link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
+		<link href="stylesheets/map.css" type="text/css" rel="stylesheet">
+		</link>
+	</head>
+	<body>
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top btn-primary">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<!-- controls scrolling mechanism when user clicks specific info tab -->
+					<a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="page-scroll" href="/">Home</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/profilepage">Profile</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/schedule">Schedule</a>
+						</li>
+						<li>
+							<a>Logged in as <span id="username">{{username}}</span></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/logout">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="map"></div>
+		<div  id="messagesContainer" class="no-overflow">
+			<h2 class="section-heading text-center">Messages</h2>
+			<div id="messagesParent">
+				<ul id="messages"></ul>
+				<form action="">
+					<div class="input-group">
+						<input id="m"  type="text" class="form-control" autocomplete="off"/>
+						<span class="input-group-btn">
+						<button class="btn btn-secondary" type="submit">Send</button>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="bootstrap/js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="bootstrap/js/jquery.easing.min.js"></script>
+		<script src="bootstrap/js/jquery.fittext.js"></script>
+		<script src="bootstrap/js/wow.min.js"></script>
+		<script src="bootstrap/js/creative.js"></script>
+	</body>
 </html>

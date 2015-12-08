@@ -2,266 +2,261 @@
 <!DOCTYPE html>
 <!-- index page for users logged in -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- title page -->
-    <title>Hey Ü</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
-</head>
-
-<body id="page-top">
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                  <li>
-                      <a class="page-scroll" href="/login">login</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#portfolio">About</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" href="#contact">Contact</a>
-                  </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <!-- Intro to web app -->
-                <h1>Hey Ü</h1>
-                <hr>
-                <!-- lets uesrs click to create their profile page -->
-                <a href="#about" class="btn btn-default btn-xl page-scroll">Find Out More</a>
-            </div>
-        </div>
-    </header>
-
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <!-- if users have an account, they can continue to their profile by logging in -->
-                    <h2 class="section-heading">Already have an account?</h2>
-                    <hr class="light">
-                    <!-- user can log into webapp with their gmail account -->
-                    <p class="text-faded">Just simply login to our app and immediately start using it with your friends!</p>
-                    <!-- login button -->
-                    <a href="/login" class="btn btn-default btn-xl">Login</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                  <!-- if user does not have an account, they have to make one following these steps -->
-                    <h2 class="section-heading">Dont have an account?</h2>
-                    <hr class="primary">
-                    <!-- user clicks button to sign up for their profile page -->
-                    <a href="/signup" class="btn btn-primary btn-xl">Sign Up</a>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <!-- first step is to click sign up and fill out the form -->
-                        <h3>Step 1</h3>
-                        <p class="text-muted">Sign up now!</p>
-                    </div>
-                </div>
-                <!-- choose subject and find student to study with -->
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Step 2</h3>
-                        <!-- second step is to verify their account with their gmail -->
-                        <p class="text-muted">Verification.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <!-- third step is to go and find friends on webapp -->
-                        <h3>Step 3</h3>
-                        <p class="text-muted">Find friends to study with.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Step 4</h3>
-                        <!-- last step is to go into the maps/chatroom page and find study buddies -->
-                        <p class="text-muted">Start a study session.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                  <!-- background info on webapp -->
-                    <h2 class="section-heading">Our Story</h2>
-                    <hr class="light">
-                    <p class="text-faded">Hey Ü is an app that lets you and your friends/classmates study more efficiently. Instead of wondering when your friends are done with classes or if they are busy, let Hey Ü find the most convenient time for both of you to study together. Never deal with the hassle of constantly finding a study session with your friends ever again.
-
-                      All you have to do is create an account and set your schedule. Then, you can instantly find nearby friends to start studying with.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="portfolio">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12 text-center">
-                      <!-- list of creators for webapp -->
-                      <h2 class="section-heading">Meet Our Creators</h2>
-                      <p></p>
-                      <hr class="primary">
-    <section class="no-padding">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="bootstrap/img/portfolio/joe.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                </div>
-                                <div class="project-name">
-                                    Joe
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="bootstrap/img/portfolio/nathan.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                </div>
-                                <div class="project-name">
-                                    Nathan
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="bootstrap/img/portfolio/vik.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                </div>
-                                <div class="project-name">
-                                    Vikrant
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="bootstrap/img/portfolio/jewel.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                </div>
-                                <div class="project-name">
-                                    Jewel
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="bootstrap/img/portfolio/jon.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                </div>
-                                <div class="project-name">
-                                    Jon
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="bootstrap/img/portfolio/naman.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                </div>
-                                <div class="project-name">
-                                    Naman
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Got a question? Just want to stop and say hi? Just shoot us an email!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>(708)-244-9032</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:ztan19@illinois.edu">ztan19@illinois.edu</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/jquery.easing.min.js"></script>
-    <script src="bootstrap/js/jquery.fittext.js"></script>
-    <script src="bootstrap/js/wow.min.js"></script>
-    <script src="bootstrap/js/creative.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- title page -->
+		<title>Hey Ü</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
+		<link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
+	</head>
+	<body id="page-top">
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top">Welcome</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="page-scroll" href="/login">login</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#portfolio">About</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="header-content">
+				<div class="header-content-inner">
+					<!-- Intro to web app -->
+					<h1>Hey Ü</h1>
+					<hr>
+					<!-- lets uesrs click to create their profile page -->
+					<a href="#about" class="btn btn-default btn-xl page-scroll">Find Out More</a>
+				</div>
+			</div>
+		</header>
+		<section class="bg-primary" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<!-- if users have an account, they can continue to their profile by logging in -->
+						<h2 class="section-heading">Already have an account?</h2>
+						<hr class="light">
+						<!-- user can log into webapp with their gmail account -->
+						<p class="text-faded">Just simply login to our app and immediately start using it with your friends!</p>
+						<!-- login button -->
+						<a href="/login" class="btn btn-default btn-xl">Login</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<!-- if user does not have an account, they have to make one following these steps -->
+						<h2 class="section-heading">Dont have an account?</h2>
+						<hr class="primary">
+						<!-- user clicks button to sign up for their profile page -->
+						<a href="/signup" class="btn btn-primary btn-xl">Sign Up</a>
+						<br>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 text-center">
+						<div class="service-box">
+							<i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+							<!-- first step is to click sign up and fill out the form -->
+							<h3>Step 1</h3>
+							<p class="text-muted">Sign up now!</p>
+						</div>
+					</div>
+					<!-- choose subject and find student to study with -->
+					<div class="col-lg-3 col-md-6 text-center">
+						<div class="service-box">
+							<i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+							<h3>Step 2</h3>
+							<!-- second step is to verify their account with their gmail -->
+							<p class="text-muted">Verification.</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 text-center">
+						<div class="service-box">
+							<i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+							<!-- third step is to go and find friends on webapp -->
+							<h3>Step 3</h3>
+							<p class="text-muted">Find friends to study with.</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 text-center">
+						<div class="service-box">
+							<i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+							<h3>Step 4</h3>
+							<!-- last step is to go into the maps/chatroom page and find study buddies -->
+							<p class="text-muted">Start a study session.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-primary" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<!-- background info on webapp -->
+						<h2 class="section-heading">Our Story</h2>
+						<hr class="light">
+						<p class="text-faded">Hey Ü is an app that lets you and your friends/classmates study more efficiently. Instead of wondering when your friends are done with classes or if they are busy, let Hey Ü find the most convenient time for both of you to study together. Never deal with the hassle of constantly finding a study session with your friends ever again.
+							All you have to do is create an account and set your schedule. Then, you can instantly find nearby friends to start studying with.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="portfolio">
+		<div class="container">
+		<div class="row">
+		<div class="col-lg-12 text-center">
+		<!-- list of creators for webapp -->
+		<h2 class="section-heading">Meet Our Creators</h2>
+		<p></p>
+		<hr class="primary">
+		<section class="no-padding">
+			<div class="container-fluid">
+				<div class="row no-gutter">
+					<div class="col-lg-4 col-sm-6">
+						<a href="#" class="portfolio-box">
+							<img src="bootstrap/img/portfolio/joe.jpg" class="img-responsive" alt="">
+							<div class="portfolio-box-caption">
+								<div class="portfolio-box-caption-content">
+									<div class="project-category text-faded">
+									</div>
+									<div class="project-name">
+										Joe
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#" class="portfolio-box">
+							<img src="bootstrap/img/portfolio/nathan.jpg" class="img-responsive" alt="">
+							<div class="portfolio-box-caption">
+								<div class="portfolio-box-caption-content">
+									<div class="project-category text-faded">
+									</div>
+									<div class="project-name">
+										Nathan
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#" class="portfolio-box">
+							<img src="bootstrap/img/portfolio/vik.jpg" class="img-responsive" alt="">
+							<div class="portfolio-box-caption">
+								<div class="portfolio-box-caption-content">
+									<div class="project-category text-faded">
+									</div>
+									<div class="project-name">
+										Vikrant
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#" class="portfolio-box">
+							<img src="bootstrap/img/portfolio/jewel.jpg" class="img-responsive" alt="">
+							<div class="portfolio-box-caption">
+								<div class="portfolio-box-caption-content">
+									<div class="project-category text-faded">
+									</div>
+									<div class="project-name">
+										Jewel
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#" class="portfolio-box">
+							<img src="bootstrap/img/portfolio/jon.jpg" class="img-responsive" alt="">
+							<div class="portfolio-box-caption">
+								<div class="portfolio-box-caption-content">
+									<div class="project-category text-faded">
+									</div>
+									<div class="project-name">
+										Jon
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<a href="#" class="portfolio-box">
+							<img src="bootstrap/img/portfolio/naman.jpg" class="img-responsive" alt="">
+							<div class="portfolio-box-caption">
+								<div class="portfolio-box-caption-content">
+									<div class="project-category text-faded">
+									</div>
+									<div class="project-name">
+										Naman
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 text-center">
+						<h2 class="section-heading">Let's Get In Touch!</h2>
+						<hr class="primary">
+						<p>Got a question? Just want to stop and say hi? Just shoot us an email!</p>
+					</div>
+					<div class="col-lg-4 col-lg-offset-2 text-center">
+						<i class="fa fa-phone fa-3x wow bounceIn"></i>
+						<p>(708)-244-9032</p>
+					</div>
+					<div class="col-lg-4 text-center">
+						<i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+						<p><a href="mailto:ztan19@illinois.edu">ztan19@illinois.edu</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="bootstrap/js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="bootstrap/js/jquery.easing.min.js"></script>
+		<script src="bootstrap/js/jquery.fittext.js"></script>
+		<script src="bootstrap/js/wow.min.js"></script>
+		<script src="bootstrap/js/creative.js"></script>
+	</body>
 </html>

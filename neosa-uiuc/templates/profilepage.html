@@ -1,209 +1,217 @@
 <!DOCTYPE html>
 <!-- author Vikrant Sharma -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- title of webapp tab -->
-    <title>Hey Ü | Profile</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/profilepage.css" type="text/css">
-</head>
-<body id="page-top">
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="/">Welcome</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                  <a class="page-scroll" href="/">Home</a>
-              </li>
-              <li>
-                  <a class="page-scroll" href="/schedule">Schedule</a>
-              </li>
-              <li>
-                  <a class="page-scroll" href="/map">Map</a>
-              </li>
-              <li>
-                <a class="page-scroll" href="/logout">Logout</a>
-              </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-  <header>
-      <div class="header-content">
-          <div class="header-content-inner">
-              <h1>Hey {{current_user}}</h1>
-              <hr>
-              <p>Find Your Friends</p>
-              <a href="/map" class="btn btn-primary btn-xl page-scroll">Explore</a>
-          </div>
-      </div>
-  </header>
-  <section class="bg-primary" id="about">
-      <div class="container">
-          <div class="row">
-
-              <div class="col-md-8 text-center">
-                  <h2 class="section-heading">Your Profile</h2>
-                  <hr class="light">
-                  <p class="text-faded"></p>
-
-                  <div id="ProfilePage">
-                    <div id="LeftCol">
-                      <div id="Photo"></div>
-                      <div id="ProfileOptions">
-                        {{current_user}}
-                      </div>
-                    </div>
-                    <div id="Info">
-                      <div class="row text-left">
-                        <div class="col-md-3">
-
-                            <p>
-                                <strong>Name:</strong>
-                            </p>
-                            <p>
-                                <strong>University:</strong>
-                            </p>
-                            <p>
-                                <strong>Major:</strong>
-                            </p>
-                            <p>
-                                <strong>Subject:</strong>
-                            </p>
-                            <p>
-                                <strong>Friends:</strong>
-                            </p>
-                            <p>
-                                <strong>Email:</strong>
-                            </p>
-                            <p>
-                                <strong>Schedule:</strong>
-                            </p>
-                        </div>
-                          <div class="col-md-9">
-
-                              <p>
-                                  <span>{{user.first_name + " " + user.last_name}}</span>
-                              </p>
-                              <p>
-                                  <span>University of Illinois at Urbana-Champaign</span>
-                              </p>
-                              <p>
-                                  <span>{{user.major}}</span>
-                              </p>
-                              <p>
-                                  <span>{{user.subject}}</span>
-                              </p>
-                              <p>
-                                  <span>{{user.friends}}</span>
-                              </p>
-                              <p>
-                                  <span>{{user.email_address}}</span>
-                              </p>
-                              <p>
-                                  <span>{{user.schedule}}</span>
-                              </p>
-                          </div>
-                      </div>
-
-                        <!-- <p>
-                            <strong>:</strong>
-                            <span>Sirjon</span>
-                        </p> -->
-                    <!-- Needed because other elements inside ProfilePage have floats -->
-                    <div style="clear:both"></div>
-                  </div>
-                  </br>
-                  <!-- button looks  for nearby buddy for user on google maps (still in testing)-->
-                  <button onclick="location.href = 'http://localhost:8080/map';" id="Find me a buddy!" class="btn btn-default btn-xl" >Find me a buddy!</button>
-              </div>
-
-          </div>
-
-                        <div class="col-md-4">
-                          <table cellpadding="0" cellspacing="0" id="our_table" class="noselect table table-bordered">
-                              <tr>
-                                <td>7:00 am</td>
-
-                              </tr>
-                              <tr>
-                                <td>8:00 am</td>
-
-                              </tr>
-                              <tr>
-                                <td>9:00 am</td>
-
-                              </tr>
-                              <tr>
-                                <td>10:00 am</td>
-
-                              </tr>
-                              <tr>
-                                <td>11:00 am</td>
-
-                              </tr>
-                              <tr>
-                                <td>12:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>1:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>2:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>3:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>4:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>5:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>6:00 pm</td>
-
-                              </tr>
-                              <tr>
-                                <td>7:00 pm</td>
-
-                              </tr>
-                            </table>
-                          </div>
-      </div>
-  </section>
-
-    <script src="bootstrap/js/jquery.js"></script>
-    <script src="scripts/schedule.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/jquery.easing.min.js"></script>
-    <script src="bootstrap/js/jquery.fittext.js"></script>
-    <script src="bootstrap/js/wow.min.js"></script>
-    <script src="bootstrap/js/creative.js"></script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- title of webapp tab -->
+		<title>Hey Ü | Profile</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/font-awesome/css/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="bootstrap/css/animate.min.css" type="text/css">
+		<link rel="stylesheet" href="bootstrap/css/creative.css" type="text/css">
+		<link rel="stylesheet" href="stylesheets/profilepage.css" type="text/css">
+	</head>
+	<body id="page-top">
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="/">Welcome</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="page-scroll" href="/">Home</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/schedule">Schedule</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/map">Map</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/logout">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<header>
+			<div class="header-content">
+				<div class="header-content-inner">
+					<h1>Hey {{current_user}}</h1>
+					<hr>
+					<p>Find Your Friends</p>
+					<a href="/map" class="btn btn-primary btn-xl page-scroll">Explore</a>
+				</div>
+			</div>
+		</header>
+		<section class="bg-primary" id="about">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-8 text-center">
+					<h2 class="section-heading">Your Profile</h2>
+					<hr class="light">
+					<p class="text-faded"></p>
+					<div id="ProfilePage">
+						<div id="LeftCol">
+							<div id="Photo"></div>
+							<div id="ProfileOptions">
+								{{current_user}}
+							</div>
+						</div>
+						<div id="Info">
+							<div class="row text-left">
+								<div class="col-md-3">
+									<p>
+										<strong>Name:</strong>
+									</p>
+									<p>
+										<strong>University:</strong>
+									</p>
+									<p>
+										<strong>Major:</strong>
+									</p>
+									<p>
+										<strong>Subject:</strong>
+									</p>
+									<p>
+										<strong>Friends:</strong>
+									</p>
+									<p>
+										<strong>Email:</strong>
+									</p>
+									<p>
+										<strong>Schedule:</strong>
+									</p>
+								</div>
+								<div class="col-md-9">
+									<p>
+										<span>{{user.first_name + " " + user.last_name}}</span>
+									</p>
+									<p>
+										<span>University of Illinois at Urbana-Champaign</span>
+									</p>
+									<p>
+										<span>{{user.major}}</span>
+									</p>
+									<p>
+										<span>{{user.subject}}</span>
+									</p>
+									<p>
+										<span>{{user.friends}}</span>
+									</p>
+									<p>
+										<span>{{user.email_address}}</span>
+									</p>
+									<p>
+										<span>{{user.schedule}}</span>
+									</p>
+								</div>
+							</div>
+							<!-- <p>
+								<strong>:</strong>
+								<span>Sirjon</span>
+								</p> -->
+							<!-- Needed because other elements inside ProfilePage have floats -->
+							<div style="clear:both"></div>
+						</div>
+						</br>
+						<!-- button looks  for nearby buddy for user on google maps (still in testing)-->
+						<button onclick="location.href = 'http://localhost:8080/map';" id="Find me a buddy!" class="btn btn-default btn-xl" >Find me a buddy!</button>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<table cellpadding="0" cellspacing="0" id="our_table" class="noselect table table-bordered">
+						<tr>
+							<td>7:00 am</td>
+						</tr>
+						<tr>
+							<td>8:00 am</td>
+						</tr>
+						<tr>
+							<td>9:00 am</td>
+						</tr>
+						<tr>
+							<td>10:00 am</td>
+						</tr>
+						<tr>
+							<td>11:00 am</td>
+						</tr>
+						<tr>
+							<td>12:00 pm</td>
+						</tr>
+						<tr>
+							<td>1:00 pm</td>
+						</tr>
+						<tr>
+							<td>2:00 pm</td>
+						</tr>
+						<tr>
+							<td>3:00 pm</td>
+						</tr>
+						<tr>
+							<td>4:00 pm</td>
+						</tr>
+						<tr>
+							<td>5:00 pm</td>
+						</tr>
+						<tr>
+							<td>6:00 pm</td>
+						</tr>
+						<tr>
+							<td>7:00 pm</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div>
+				<br>
+			<div class="col-md-4 col-md-offset-4 text-center">
+				<h2 class="section-heading">Update Profile</h2>
+				<br>
+				<br>
+				<form class="form" method="post">
+					<div class="form-group">
+						<label for="firstName">First Name</label>
+						<input type="text" class="form-control" name="first_name" placeholder="{{user.first_name}}" id="firstName">
+					</div>
+					<div class="form-group">
+						<label for="lastName">Last Name</label>
+						<input type="text" class="form-control" name="last_name" placeholder="{{user.last_name}}" id="lastName">
+					</div>
+					<div class="form-group">
+						<label for="username">Subject</label>
+						<input type="text" class="form-control" name="subject" placeholder="{{user.subject}}" id="subject">
+					</div>
+					<div class="form-group">
+						<label for="major">Major</label>
+						<input type="text" class="form-control" name="major" placeholder="{{user.major}}" id="major">
+					</div>
+					<!-- <input type="text" name="date_of_birth" placeholder="Date of Birth">
+						<br>
+						<br> -->
+					<INPUT TYPE="button" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
+				</form>
+			</div>
+		</section>
+		<script src="bootstrap/js/jquery.js"></script>
+		<script src="scripts/schedule.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="bootstrap/js/jquery.easing.min.js"></script>
+		<script src="bootstrap/js/jquery.fittext.js"></script>
+		<script src="bootstrap/js/wow.min.js"></script>
+		<script src="bootstrap/js/creative.js"></script>
+	</body>
 </html>
