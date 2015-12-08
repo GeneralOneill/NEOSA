@@ -120,10 +120,6 @@
 									</p>
 								</div>
 							</div>
-							<!-- <p>
-								<strong>:</strong>
-								<span>Sirjon</span>
-								</p> -->
 							<!-- Needed because other elements inside ProfilePage have floats -->
 							<div style="clear:both"></div>
 						</div>
@@ -185,24 +181,21 @@
 				<form class="form" method="post">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
-						<input type="text" class="form-control" name="first_name" placeholder="{{user.first_name}}" id="firstName">
+						<input type="text" class="form-control" name="first_name" value="{{user.first_name}}" id="firstName">
 					</div>
 					<div class="form-group">
 						<label for="lastName">Last Name</label>
-						<input type="text" class="form-control" name="last_name" placeholder="{{user.last_name}}" id="lastName">
+						<input type="text" class="form-control" name="last_name" value="{{user.last_name}}" id="lastName">
 					</div>
 					<div class="form-group">
 						<label for="username">Subject</label>
-						<input type="text" class="form-control" name="subject" placeholder="{{user.subject}}" id="subject">
+						<input type="text" class="form-control" name="subject" value="{{user.subject}}" id="subject">
 					</div>
 					<div class="form-group">
 						<label for="major">Major</label>
-						<input type="text" class="form-control" name="major" placeholder="{{user.major}}" id="major">
+						<input type="text" class="form-control" name="major" value="{{user.major}}" id="major">
 					</div>
-					<!-- <input type="text" name="date_of_birth" placeholder="Date of Birth">
-						<br>
-						<br> -->
-					<INPUT TYPE="button" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
+					<INPUT type="Submit" onClick="history.go(0)" VALUE="Update" class="btn btn-default btn-xl">
 				</form>
 			</div>
 		</section>

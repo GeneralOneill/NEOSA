@@ -179,11 +179,17 @@ class ProfilePageHandler(webapp2.RequestHandler):
             #if the user is logged on then we can call all of the user properties
             template = jinja_environment.get_template('templates/profilepage.html')
             self.response.out.write(template.render({"user":user}))
-            #we are sending the user dictionary as an object to the profile page 
-
+            #we are sending the user dictionary as an object to the profile page
     def post(self):
-        self.response.headers['Content-Type'] = 'application/json';
-        self.response.out.write(template.render({"user":user}))
+        user = getCurrentUser().get()
+        user.first_name = self.request.get("first_name")
+        user.last_name = self.request.get("last_name")
+        user.major = self.request.get("major")
+        user.subject = self.request.get("subject")
+        user.put()
+        # self.response.out.write(user.first_name)
+        self.redirect('/profilepage')
+
 
 # sets the pointers to the appropriate class
 # ie the path in the url
