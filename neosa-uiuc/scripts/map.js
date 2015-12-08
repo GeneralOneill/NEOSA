@@ -446,8 +446,8 @@ function createUsersMarker(object){
   var contentString = '<div id="content">'+
     '<h4>' + user_name + '</h4>' +
     '<p>Wants to study: '+ userSubject + '.</p>' +
-    '</div>' + '<div id="addFriend">' +
-    '<h4 onclick="addFriend(\''+user_name+'\')"> Add Friend </h4></div>';
+    '</div>' + '<div id="addFriend" class="text-center">' +
+    '<button class="btn btn-primary" onclick="addFriend(\''+user_name+'\')"> Add Friend </button></div>';
 
   var infoWindow = new google.maps.InfoWindow({
     content: contentString
