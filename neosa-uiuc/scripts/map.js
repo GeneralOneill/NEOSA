@@ -417,9 +417,10 @@ function setUsersPositions(userInfoArray){
 function addFriend(username){
   console.log(username);
   jQuery.ajax({
+    name: "username",
     type: 'POST',
     url: "/addFriend",
-    data: {'username':username},
+    data: {'username':JSON.stringify(username)},
     success: function(data){
         alert('Added ' + username + " to Friends!");
     }

@@ -101,10 +101,18 @@
 										<span>{{user.subject}}</span>
 									</p>
 									<p>
-										<span>{{user.friends}}</span>
+										<span>{{user.email_address}}</span>
 									</p>
 									<p>
-										<span>{{user.email_address}}</span>
+										<span>
+											{% for friend in user.friends %}
+											<table>
+												<tr>
+													<td>{{friend}}</td>
+														{% endfor %}
+												</tr>
+											</table>
+										</span>
 									</p>
 								</div>
 							</div>

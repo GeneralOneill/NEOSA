@@ -44,7 +44,12 @@ class setUserInActive(webapp2.RequestHandler):
 
 class addFriend(webapp2.RequestHandler):
     def post(self):
-        addFriend(self.request.get('username'))
+        user = getCurrentUser().get()
+        blob = self.request.get('username')
+        username = json.loads(blob)
+        if username not in user.friends:
+            user.friends.append(username)
+            user.put()
 
 # handles the rendering of the homepage
 # checks if the user is logged in
