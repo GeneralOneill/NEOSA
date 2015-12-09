@@ -393,6 +393,17 @@ function getAllActiveUsersLatLng(){
     }
   });
 }
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+  for (i in userMarkers) {
+    userMarkers[i]["marker"].setMap(map);
+  }
+}
+
+// Removes the markers from the map, but keeps them in the array.
+function clearMarkers() {
+  setMapOnAll(null);
+}
 
 /**
  * For each user in an array of user information objects,
@@ -401,9 +412,11 @@ function getAllActiveUsersLatLng(){
  *    An array of user information JSON objects
  */
 function setUsersPositions(userInfoArray){
+  //remove unupdated markers
+  clearMarkers();
   for(var i = 0; i < userInfoArray.length; i = i + 1){
     //if the userMarkers dict already has this user
-    if(userMarkers.hasOwnProperty(userInfoArray[i].username)){
+    if(userMarkers.hasOwnProperty(userInfoArray[i]["username"])){
       //update their marker
       updateUserMarker(userInfoArray[i]);
     }
@@ -482,6 +495,7 @@ function updateUserMarker(object) {
     var userId = object.user_id;
     var user_name = object.username;
     var userMarker = userMarkers[user_name]["marker"];
+    userMarker.setMap(map);
     userMarker.setPosition(latLng);
     console.log("Updating user: " + user_name + "'s location.'");
 }
