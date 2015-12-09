@@ -236,6 +236,14 @@ $(window).blur(function() {
   });
 });
 
+// sets user to Inactive
+$(window).unload(function() {}
+    jQuery.ajax({
+      type: 'GET',
+      url: "/setInactive",
+    });
+});
+
 /**
  * Create and add styles to the page for the current logged-in user.
  */
