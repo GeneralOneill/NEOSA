@@ -215,7 +215,7 @@ function initialize() {
   setUsernameStyles();
   initCenterMapButton();
   getUserLocation();
-  getAllActiveUsersLatLng()
+  getAllActiveUsersLatLng();
   setInterval(getAllActiveUsersLatLng, 30000);
   activateSocketIO();
 }
