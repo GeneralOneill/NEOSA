@@ -415,7 +415,6 @@ function setUsersPositions(userInfoArray){
 }
 
 function addFriend(username){
-  console.log(username);
   jQuery.ajax({
     name: "username",
     type: 'POST',
@@ -433,9 +432,10 @@ function addFriend(username){
  *    JSON object containing relevant user information.
  */
 function createUsersMarker(object){
+  console.log(object);
   var latLng = object.latlng;
   var userId = object.user_id;
-  var user_name = object.username;
+  var user_name = object["username"];
   var userSubject = object.subject;
   var pinColor = "FE7569";
   var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
@@ -457,7 +457,7 @@ function createUsersMarker(object){
     map: map,
     position: latLng,
     icon: pinImage,
-    title: 'User: ' + username
+    title: 'User: ' + user_name
   });
 
   infoWindow.open(map, userMarker);
@@ -466,8 +466,8 @@ function createUsersMarker(object){
     infoWindow.open(map, userMarker);
   });
 
-  userMarkers[username] = {"marker": userMarker};
-  console.log("Creating marker for user: " + username + "'s location.'");
+  userMarkers[user_name] = {"marker": userMarker};
+  console.log("Creating marker for user: " + user_name + "'s location.'");
   console.log(userMarkers);
 }
 
@@ -480,10 +480,10 @@ function createUsersMarker(object){
 function updateUserMarker(object) {
     var latLng = object.latlng;
     var userId = object.user_id;
-    var username = object.username;
-    var userMarker = userMarkers[username]["marker"];
+    var user_name = object.username;
+    var userMarker = userMarkers[user_name]["marker"];
     userMarker.setPosition(latLng);
-    console.log("Updating user: " + username + "'s location.'");
+    console.log("Updating user: " + user_name + "'s location.'");
 }
 
 /**
