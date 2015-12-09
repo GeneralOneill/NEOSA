@@ -237,7 +237,7 @@ $(window).blur(function() {
 });
 
 // sets user to Inactive
-$(window).unload(function() {}
+$(window).unload(function() {
     jQuery.ajax({
       type: 'GET',
       url: "/setInactive",
